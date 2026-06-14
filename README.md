@@ -2,43 +2,54 @@
 
 ## Objective
 
-Investigate immune cell heterogeneity in peripheral blood mononuclear cells (PBMCs) associated with periodontitis using single-cell RNA sequencing and identify major immune populations through unsupervised clustering and marker-based annotation.
+Investigate immune cell heterogeneity in peripheral blood mononuclear cells (PBMCs) associated with periodontitis using single-cell RNA sequencing and identify immune populations through unsupervised clustering and marker-based annotation.
 
 ---
 
 ## Dataset
 
-* Dataset: GSE174609
-* Source: Gene Expression Omnibus (GEO)
-* Data Type: Single-cell RNA sequencing (scRNA-seq)
-* Sample Type: PBMC (Peripheral Blood Mononuclear Cells)
+Source: GEO — GSE174609
+
+Single-cell RNA sequencing dataset generated from PBMC samples.
+
+### Study Design
+
+Samples included:
+- Periodontitis
+- Post-treatment
+- Healthy controls
+
+Total samples included: 22
+
+Analysis focused on characterizing immune cell composition and cellular heterogeneity across PBMC samples.
 
 ---
 
 ## Workflow
 
-1. Data acquisition from GEO
-2. Quality control (QC)
-3. Normalization
-4. Variable feature selection
-5. Scaling
-6. Principal Component Analysis (PCA)
-7. UMAP dimensionality reduction
-8. Louvain clustering
-9. Marker gene identification
-10. Cell type annotation
+1. Data acquisition from GEO  
+2. Quality control (QC)  
+3. Data normalization  
+4. Variable feature selection  
+5. Data scaling  
+6. Principal Component Analysis (PCA)  
+7. UMAP dimensionality reduction  
+8. Graph-based Louvain clustering  
+9. Marker gene identification  
+10. Cell type annotation  
 
 ---
 
 ## Methods and Tools
 
-* R
-* Seurat
-* Single-cell RNA-seq
-* PCA
-* UMAP
-* Differential expression
-* Bioinformatics
+- R
+- Seurat
+- Single-cell RNA sequencing
+  (scRNA-seq)
+- PCA
+- UMAP
+- Differential expression analysis
+- Bioinformatics
 
 ---
 
@@ -46,34 +57,33 @@ Investigate immune cell heterogeneity in peripheral blood mononuclear cells (PBM
 
 ### Dataset Summary
 
-* 7,710 cells analyzed
-* 18,989 genes retained after preprocessing
-* 13 immune populations identified
+- 22 PBMC samples analyzed (Periodontitis, Post-treatment, Healthy controls)
+- 7,710 high-quality cells retained after quality control
+- 18,989 genes retained for downstream analysis
+- 13 transcriptionally distinct immune populations identified
 
-### Major Cell Types Identified
+### Annotated Cell Populations
 
-* Naive / Central Memory T cells
-* Activated CD4 T cells
-* Inflammatory Monocytes
-* Cytotoxic NK / CD8 cells
-* Monocytes
-* Gamma Delta T cells
-* B cells
-* NK cells
-* Dendritic cells
-* Activated Monocytes
-* Cycling cells
-* Platelets
+- Naive / Central Memory T cells
+- Activated CD4 T cells
+- Inflammatory Monocytes
+- Cytotoxic NK / CD8 cells
+- Monocytes
+- Gamma Delta T cells
+- B cells
+- NK cells
+- Dendritic cells
+- Activated Monocytes
+- Cycling cells
+- Platelets
 
----
+### Key Findings
 
-## Key Findings
-
-* Successfully completed end-to-end scRNA-seq analysis workflow
-* Identified diverse immune populations within PBMC samples
-* Observed inflammatory monocyte-associated signatures
-* Generated interpretable cluster-level marker profiles
-* Produced publication-style visualizations
+- Characterized immune cell heterogeneity across PBMC samples
+- Identified distinct immune populations through unsupervised clustering
+- Observed inflammatory monocyte-associated transcriptional signatures
+- Generated cluster-specific marker gene profiles
+- Produced interpretable UMAP and marker heatmap visualizations
 
 ---
 
@@ -97,16 +107,16 @@ results/
 
 ## Outputs
 
-* UMAP visualization
-* Cluster annotations
-* Marker gene tables
-* Cell population summaries
+- UMAP visualization
+- Cluster annotation
+- Marker gene tables
+- Cell population summaries
 
 ---
 
 ## Reproducibility
 
-Raw sequencing files are excluded from this repository and are available through GEO.
+Raw sequencing files are excluded from this repository and are publicly available through GEO.
 
 Dataset accession:
 GSE174609
@@ -117,5 +127,4 @@ GSE174609
 
 Prudhvi Teja Odela
 
-Computational Biology · Bioinformatics · Single-cell Analysis
-
+Bioinformatics · Computational Biology· Single-cell Transcriptomics
